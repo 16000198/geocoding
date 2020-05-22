@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: 
+    - master
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  build:
+    strategy:
+    matrix:
+      os: [ubuntu-18.04, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK
+      uses: actions/setup-java@v1
+      with:
+        java-version: 14
+        java-package: jdk
+        architecture: x64
+    - name: Build with Gradle
+      run: gradle build
+    - name: Publish to GitHub Packages
+      run: gradle publish
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
