@@ -24,6 +24,13 @@ hs_err_pid*
 
 # MacOS
 .DS_Store
+
 # IntelliJ IDEA
 .idea
 *.iml
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
