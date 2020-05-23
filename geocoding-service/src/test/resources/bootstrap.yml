@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    config:
+      enabled: false
+
+logging:
+  level:
+    org.springframework.test.context.cache: debug
+
+geocoder:
+  api-url: https://nominatim.openstreetmap.org/search

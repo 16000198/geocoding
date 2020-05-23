@@ -1,0 +1,3 @@
+# geocoding
+
+geocoding-client-model contains objects to interact with geocoding-service via HTTP API
