@@ -14,9 +14,11 @@ repositories {
 	}
 }
 
-publications {
-	register("gpr") {
-		from(components["java"])
+publishing{
+	publications {
+		register("gpr") {
+			from(components["java"])
+		}
 	}
 }
 
