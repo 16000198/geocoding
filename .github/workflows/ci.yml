@@ -24,6 +24,10 @@ jobs:
         architecture: x64
     - name: Build with Gradle
       run: gradle build
+  publish:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
     - name: Publish to GitHub Packages
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
