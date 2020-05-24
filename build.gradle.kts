@@ -2,7 +2,7 @@ subprojects {
 	group = "io.slick.metcast"
 	version = "1.0"
 	plugins {
-		maven-publish
+		id("maven-publish")
 	}
 	repositories {
 		mavenCentral()
