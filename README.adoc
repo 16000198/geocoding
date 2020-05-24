@@ -1,4 +1,4 @@
-![](https://github.com/16000198/geocoding/workflows/CI/badge.svg)
+image:https://github.com/16000198/geocoding/workflows/CI/badge.svg[image]
 
 # geocoding
 
