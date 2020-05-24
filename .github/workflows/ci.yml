@@ -25,6 +25,7 @@ jobs:
     - name: Build with Gradle
       run: gradle build
   publish:
+    needs: [build]
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
