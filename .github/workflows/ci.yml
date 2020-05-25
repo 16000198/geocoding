@@ -33,7 +33,7 @@ jobs:
     - name: Build with Gradle
       run: gradle build
     - name: Display structure
-      run: ls
+      run: ls geocoding-client-model
     - name: Upload artifact to share it between jobs
       uses: actions/upload-artifact@v2
       with:
