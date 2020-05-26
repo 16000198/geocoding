@@ -7,7 +7,7 @@ on:
   pull_request:
     branches:
     - master
-# do not publish on pull request!
+# TODO: do not publish on pull request!
 
 jobs:
   build:

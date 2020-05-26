@@ -3,17 +3,6 @@ plugins {
 	`maven-publish`
 }
 
-repositories {
-	maven {
-		name = "GitHubPackages"
-		url = uri("https://maven.pkg.github.com/16000198/geocoding")
-		credentials {
-			username = System.getenv("GITHUB_ACTOR")
-			password = System.getenv("GITHUB_TOKEN")
-		}
-	}
-}
-
 publishing {
 	publications {
 		create<MavenPublication>("maven") {
@@ -22,6 +11,17 @@ publishing {
 			version = project.version.toString()
 
 			from(components["java"])
+		}
+	}
+
+	repositories {
+		maven {
+			name = "GitHubPackages"
+			url = uri("https://maven.pkg.github.com/16000198/geocoding")
+			credentials {
+				username = System.getenv("GITHUB_ACTOR")
+				password = System.getenv("GITHUB_TOKEN")
+			}
 		}
 	}
 }
