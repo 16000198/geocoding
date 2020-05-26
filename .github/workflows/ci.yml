@@ -48,8 +48,12 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: geocoding-client-model-jar
-    - name: Display structure of downloaded files
-      run: ls -R
+    - name: Set up JDK
+      uses: actions/setup-java@v1
+      with:
+        java-version: 14
+        java-package: jdk
+        architecture: x64
     - name: Publish to GitHub Packages
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
